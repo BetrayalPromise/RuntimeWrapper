@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RuntimeWrapper_Example' do
+  pod 'RuntimeWrapper', :path => '../'
+
+  target 'RuntimeWrapper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
