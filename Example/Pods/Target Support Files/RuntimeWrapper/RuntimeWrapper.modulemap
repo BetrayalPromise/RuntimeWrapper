@@ -1,0 +1,6 @@
+framework module RuntimeWrapper {
+  umbrella header "RuntimeWrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}

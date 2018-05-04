@@ -1,0 +1,36 @@
+{
+  "name": "RuntimeWrapper",
+  "version": "0.1.0",
+  "summary": "A short description of RuntimeWrapper.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/BetrayalPromise@gmail.com/RuntimeWrapper",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "BetrayalPromise@gmail.com": "BetrayalPromise@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/BetrayalPromise@gmail.com/RuntimeWrapper.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "public_header_files": "RuntimeWrapper/RuntimeWrapper.h",
+  "source_files": "RuntimeWrapper/RuntimeWrapper.h",
+  "subspecs": [
+    {
+      "name": "ARC",
+      "source_files": "RuntimeWrapper/NSObject+ARCRunTime.{h,m}",
+      "public_header_files": "RuntimeWrapper/NSObject+ARCRunTime.h"
+    },
+    {
+      "name": "MRC",
+      "requires_arc": false,
+      "source_files": "RuntimeWrapper/NSObject+MRCRunTime.{h,m}",
+      "public_header_files": "RuntimeWrapper/NSObject+MRCRunTime.h"
+    }
+  ]
+}

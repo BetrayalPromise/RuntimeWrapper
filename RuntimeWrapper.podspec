@@ -29,14 +29,18 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'RuntimeWrapper/Classes/**/*'
+  s.public_header_files = 'RuntimeWrapper/RuntimeWrapper.h'
+  s.source_files = 'RuntimeWrapper/RuntimeWrapper.h'
   
-  # s.resource_bundles = {
-  #   'RuntimeWrapper' => ['RuntimeWrapper/Assets/*.png']
-  # }
+  s.subspec 'ARC' do |ss|
+    ss.source_files = 'RuntimeWrapper/NSObject+ARCRunTime.{h,m}'
+    ss.public_header_files = 'RuntimeWrapper/NSObject+ARCRunTime.h'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'MRC' do |ss|
+    ss.requires_arc = false
+    ss.source_files = 'RuntimeWrapper/NSObject+MRCRunTime.{h,m}'
+    ss.public_header_files = 'RuntimeWrapper/NSObject+MRCRunTime.h'
+  end
+
 end

@@ -1,0 +1,20 @@
+PODS:
+  - RuntimeWrapper (0.1.0):
+    - RuntimeWrapper/ARC (= 0.1.0)
+    - RuntimeWrapper/MRC (= 0.1.0)
+  - RuntimeWrapper/ARC (0.1.0)
+  - RuntimeWrapper/MRC (0.1.0)
+
+DEPENDENCIES:
+  - RuntimeWrapper (from `../`)
+
+EXTERNAL SOURCES:
+  RuntimeWrapper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RuntimeWrapper: 75b61fea2d7f31c8dbb94e391734de573104e687
+
+PODFILE CHECKSUM: 54326f6953a432fe8f4074a8f329b7ce109032be
+
+COCOAPODS: 1.5.0
